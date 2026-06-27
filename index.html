@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Pomodoro</h1>
+
+    <div class="timer-ring">
+      <svg viewBox="0 0 200 200">
+        <circle class="ring-bg" cx="100" cy="100" r="90"/>
+        <circle class="ring-progress" id="ring" cx="100" cy="100" r="90"/>
+      </svg>
+      <div class="timer-text" id="timer-text">25:00</div>
+    </div>
+
+    <div class="session-label" id="session-label">Focus</div>
+
+    <div class="session-counter" id="session-counter">0 sessions completed</div>
+
+    <div class="controls">
+      <button class="btn btn-start" id="btn-start">Start</button>
+      <button class="btn btn-pause" id="btn-pause" disabled>Pause</button>
+      <button class="btn btn-reset" id="btn-reset">Reset</button>
+    </div>
+
+    <label class="always-on-top">
+      <input type="checkbox" id="always-on-top">
+      Always on top
+    </label>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

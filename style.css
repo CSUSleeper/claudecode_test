@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0f0f1a;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  user-select: none;
+  -webkit-app-region: drag;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  -webkit-app-region: no-drag;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #e74c3c;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Timer ring */
+.timer-ring {
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+
+.timer-ring svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.ring-bg {
+  fill: none;
+  stroke: #1e1e36;
+  stroke-width: 8;
+}
+
+.ring-progress {
+  fill: none;
+  stroke: #e74c3c;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 565.49;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.3s linear;
+}
+
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 42px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 2px;
+}
+
+/* Session label */
+.session-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: -10px;
+}
+
+/* Session counter */
+.session-counter {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+  letter-spacing: 1px;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-start {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.btn-start:hover:not(:disabled) {
+  background: #c0392b;
+}
+
+.btn-pause {
+  background: #f39c12;
+  color: #fff;
+}
+
+.btn-pause:hover:not(:disabled) {
+  background: #d68910;
+}
+
+.btn-reset {
+  background: #2c2c44;
+  color: #ccc;
+}
+
+.btn-reset:hover:not(:disabled) {
+  background: #3c3c5c;
+}
+
+/* Always on top */
+.always-on-top {
+  font-size: 13px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.always-on-top input[type="checkbox"] {
+  accent-color: #e74c3c;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
